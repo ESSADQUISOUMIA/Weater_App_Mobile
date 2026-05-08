@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primary_bg">#59469D</color>
+    <color name="secondary_bg">#1F1D47</color>
+    <color name="card_bg">#331866</color>
+    <color name="accent">#DCA900</color>
 </resources>
