@@ -20,7 +20,26 @@
             android:orientation="vertical"
             android:paddingBottom="32dp">
 
-            <!-- Barre de Recherche -->
+            <!-- En-tête avec Notification -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/notificationBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/background2"
+                    android:contentDescription="Assistant Conseil"
+                    android:padding="10dp"
+                    app:srcCompat="@android:drawable/ic_popup_reminder"
+                    app:tint="@color/accent" />
+            </RelativeLayout>
+
+            <!-- Barre de Recherche (Version d'origine conservée) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,7 +78,7 @@
                 style="@style/WeatherTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:textAlignment="center"
                 tools:text="Mostly Cloudy" />
 
@@ -100,6 +119,38 @@
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 tools:text="H:27 L:18" />
+
+            <!-- Conseil Vestimentaire (Bloc inséré au-dessus des stats) -->
+            <LinearLayout
+                android:id="@+id/adviceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background2"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/advice_title"
+                    android:textColor="@color/accent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/clothingAdviceTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:text="N'oubliez pas votre chapeau et vos lunettes de soleil..." />
+            </LinearLayout>
 
             <!-- Bloc des Statistiques -->
             <LinearLayout

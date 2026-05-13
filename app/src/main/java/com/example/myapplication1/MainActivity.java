@@ -31,9 +31,10 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerViewHourly;
     private WeatherRepository weatherRepository;
 
-    private TextView statusTxt, tempTxt, dateTxt, highLowTxt, rainTxt, windTxt, humidityTxt;
-    private ImageView mainIcon, searchBtn;
+    private TextView statusTxt, tempTxt, dateTxt, highLowTxt, rainTxt, windTxt, humidityTxt, clothingAdviceTxt;
+    private ImageView mainIcon, searchBtn, notificationBtn;
     private EditText citySearch;
+    private WeatherCurrent currentWeatherData; // Store data for the advice activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
         rainTxt = findViewById(R.id.rainTxt);
         windTxt = findViewById(R.id.windTxt);
         humidityTxt = findViewById(R.id.humidityTxt);
+        clothingAdviceTxt = findViewById(R.id.clothingAdviceTxt);
         mainIcon = findViewById(R.id.mainIcon);
         recyclerViewHourly = findViewById(R.id.view1);
+        notificationBtn = findViewById(R.id.notificationBtn);
 
         citySearch = findViewById(R.id.citySearch);
         searchBtn = findViewById(R.id.searchBtn);
@@ -75,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         weatherRepository.fetchWeatherForCity(cityName, new WeatherRepository.WeatherCallback() {
             @Override
             public void onSuccess(WeatherCurrent current, List<Hourly> hourly, List<FutureDomain> daily) {
+                currentWeatherData = current; // Save the object
                 runOnUiThread(() -> {
                     // Update Main UI using strings.xml to avoid warnings
                     statusTxt.setText(WeatherUtils.getDescription(current.weatherCode));
@@ -85,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
                     windTxt.setText(getString(R.string.wind_format, (int) Math.round(current.windSpeed)));
                     humidityTxt.setText(getString(R.string.percentage_format, current.humidity));
                     mainIcon.setImageResource(WeatherUtils.getIconRes(current.weatherCode));
+
+                    // Update Clothing Advice on Main Page
+                    int adviceResId = WeatherUtils.getClothingAdviceResId(current);
+                    clothingAdviceTxt.setText(getString(adviceResId));
 
                     // Update Hourly RecyclerView
                     recyclerViewHourly.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
@@ -101,8 +109,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setVariable() {
-        // Bouton vers la page suivante
+        // Bouton vers la page des prévisions
         findViewById(R.id.nextDaysTxt).setOnClickListener(v -> startActivity(new Intent(MainActivity.this, FutureActivity.class)));
+
+        // Bouton vers la page d'assistance contextuelle (Notification)
+        notificationBtn.setOnClickListener(v -> {
+            if (currentWeatherData != null) {
+                Intent intent = new Intent(MainActivity.this, AdviceActivity.class);
+                intent.putExtra("weather_data", currentWeatherData);
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "Veuillez charger la météo d'abord", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // Recherche au clic sur l'icône
         searchBtn.setOnClickListener(v -> {

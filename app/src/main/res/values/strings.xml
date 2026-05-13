@@ -16,4 +16,39 @@
     <string name="humidity_label">Humidity</string>
     <string name="today_label">Today</string>
     <string name="next_7_days">Next 7 Days ></string>
+
+    <!-- Clothing Advice Strings -->
+    <string name="advice_hot">N\'oubliez pas votre chapeau et vos lunettes de soleil. Privilégiez le coton léger.</string>
+    <string name="advice_windy">Prévoyez une veste coupe-vent et un pull.</string>
+    <string name="advice_rainy">Emportez un parapluie et des chaussures imperméables.</string>
+    <string name="advice_snowy">Bonnet, gants et écharpe indispensables. Double couche.</string>
+    <string name="advice_default">Tenue standard conseillée pour la journée.</string>
+    <string name="advice_title">Conseil Vestimentaire</string>
+    <string name="assistant_title">Assistant Personnel</string>
+    <string name="advice_footer">Basé sur les conditions actuelles de votre ville.</string>
+    <string name="back_desc">Retour</string>
+    <string name="assistant_btn_desc">Assistant Conseil</string>
+
+    <!-- Activity Suggestion Strings -->
+    <string name="activity_title">Activité suggérée</string>
+    <string name="activity_sunny">Météo idéale pour une balade au parc, une séance de sport en extérieur ou un pique-nique.</string>
+    <string name="activity_rainy">Parfait pour une visite de musée, un moment lecture au calme ou une séance de cinéma.</string>
+    <string name="activity_cold">Idéal pour un chocolat chaud en terrasse chauffée ou une activité créative à la maison.</string>
+    <string name="activity_storm">Météo instable : privilégiez le télétravail ou des activités d\'intérieur sécurisées.</string>
+    <string name="activity_default">Une belle journée pour vos activités habituelles, profitez-en !</string>
+
+    <!-- Chat Feature -->
+    <string name="chat_title">Discuter avec l\'assistant</string>
+    <string name="chat_welcome">Bonjour ! Posez-moi une question sur votre journée.</string>
+    <string name="chat_q1">Sport en extérieur ?</string>
+    <string name="chat_q2">Laver ma voiture ?</string>
+    <string name="chat_q3">Conseil cheveux ?</string>
+
+    <string name="ans_sport_ok">Oui ! Les conditions sont excellentes pour transpirer dehors.</string>
+    <string name="ans_sport_no">Mieux vaut rester au chaud ou aller en salle, il risque de pleuvoir.</string>
+    <string name="ans_car_ok">C\'est le moment idéal, pas de pluie prévue pour salir votre carrosserie.</string>
+    <string name="ans_car_no">Attendez un peu, la météo pourrait gâcher votre lavage rapidement.</string>
+    <string name="ans_hair_wind">Attention au vent, vos cheveux risquent de s\'emmêler. Attachez-les !</string>
+    <string name="ans_hair_rain">L\'humidité est haute, prévoyez un soin anti-frisottis.</string>
+    <string name="ans_hair_ok">Météo clémente, vos cheveux resteront parfaits aujourd\'hui.</string>
 </resources>

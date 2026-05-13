@@ -1,6 +1,8 @@
 package com.example.myapplication1.Models;
 
-public class WeatherCurrent {
+import java.io.Serializable;
+
+public class WeatherCurrent implements Serializable {
     public double temperature;
     public double tempMax;
     public double tempMin;
