@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application1</string>
+    <string name="app_name">WeatherUp</string>
     <string name="temp_format">%1$d°</string>
     <string name="date_city_format">%1$s | %2$s</string>
     <string name="high_low_format">H:%1$d L:%2$d</string>
