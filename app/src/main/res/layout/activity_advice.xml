@@ -59,8 +59,9 @@
                 android:text="@string/advice_title"
                 android:textAlignment="center"
                 android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true" />
 
             <TextView
                 android:id="@+id/adviceContent"
@@ -71,7 +72,7 @@
                 android:padding="20dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 tools:text="Tenue standard conseillée pour la journée." />
 
             <!-- Suggestion d'Activité -->
@@ -82,8 +83,9 @@
                 android:text="@string/activity_title"
                 android:textAlignment="center"
                 android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true" />
 
             <TextView
                 android:id="@+id/activityContent"
@@ -94,19 +96,20 @@
                 android:padding="20dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="17sp"
                 tools:text="Profitez du soleil pour une balade !" />
 
-            <!-- Section Discussion Interactrice -->
+            <!-- Section Discussion Améliorée -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/chat_title"
                 android:textAlignment="center"
                 android:textColor="@color/accent"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -114,18 +117,24 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/background2"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
+                <!-- Bulle de réponse de l'assistant -->
                 <TextView
                     android:id="@+id/chatResponseTxt"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/background"
+                    android:padding="16dp"
                     android:text="@string/chat_welcome"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp" />
 
+                <!-- Questions suggérées sous forme de Chips vivants -->
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -134,45 +143,52 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:paddingVertical="4dp">
 
                         <TextView
                             android:id="@+id/btnSport"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:background="@drawable/background"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/chip_background"
                             android:clickable="true"
                             android:focusable="true"
-                            android:padding="10dp"
-                            android:text="@string/chat_q1"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="10dp"
+                            android:text="Sport"
                             android:textColor="@color/white"
-                            android:textSize="13sp" />
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/btnCar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:background="@drawable/background"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/chip_background"
                             android:clickable="true"
                             android:focusable="true"
-                            android:padding="10dp"
-                            android:text="@string/chat_q2"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="10dp"
+                            android:text="Lavage auto"
                             android:textColor="@color/white"
-                            android:textSize="13sp" />
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/btnHair"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/background"
+                            android:background="@drawable/chip_background"
                             android:clickable="true"
                             android:focusable="true"
-                            android:padding="10dp"
-                            android:text="@string/chat_q3"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="10dp"
+                            android:text="Coiffure"
                             android:textColor="@color/white"
-                            android:textSize="13sp" />
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </HorizontalScrollView>
             </LinearLayout>
@@ -185,7 +201,7 @@
                 android:text="@string/advice_footer"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="13sp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

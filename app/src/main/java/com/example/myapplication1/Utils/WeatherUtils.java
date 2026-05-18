@@ -64,29 +64,57 @@ public class WeatherUtils {
         return R.string.activity_default;
     }
 
-    // --- Chat Logic ---
-    
-    public static int getSportAnswer(WeatherCurrent current) {
-        if (current.weatherCode <= 3 && current.precipitationProb < 20) {
-            return R.string.ans_sport_ok;
+    // --- Interactive Logic (Vivant/Complice) ---
+
+    public static int getLookAnswer(WeatherCurrent current) {
+        if (current.temperature >= 25) return R.string.ans_look_hot;
+        if (current.precipitationProb > 40) return R.string.ans_look_rain;
+        return R.string.ans_look_default;
+    }
+
+    public static int getBikeAnswer(WeatherCurrent current) {
+        if (current.precipitationProb < 20 && current.windSpeed < 25) {
+            return R.string.ans_bike_ok;
         }
-        return R.string.ans_sport_no;
+        return R.string.ans_bike_no;
+    }
+
+    public static int getLaundryAnswer(WeatherCurrent current) {
+        if (current.weatherCode <= 2 && current.humidity < 60 && current.precipitationProb < 10) {
+            return R.string.ans_laundry_ok;
+        }
+        return R.string.ans_laundry_no;
+    }
+    public static int getSportAnswer(WeatherCurrent current) {
+        if (current.temperature >= 25 && current.weatherCode <= 2) {
+            return R.string.sport_sunny;
+        }
+        if (current.weatherCode >= 51 && current.weatherCode <= 82) {
+            return R.string.sport_rainy;
+        }
+        if (current.temperature < 5) {
+            return R.string.sport_cold;
+        }
+        return R.string.sport_default;
     }
 
     public static int getCarWashAnswer(WeatherCurrent current) {
-        if (current.precipitationProb < 10 && current.weatherCode <= 2) {
-            return R.string.ans_car_ok;
+        if (current.precipitationProb > 30) {
+            return R.string.carwash_rainy;
         }
-        return R.string.ans_car_no;
+        if (current.temperature < 0) {
+            return R.string.carwash_cold;
+        }
+        return R.string.carwash_default;
     }
 
     public static int getHairAnswer(WeatherCurrent current) {
-        if (current.windSpeed > 25) {
-            return R.string.ans_hair_wind;
+        if (current.humidity > 70 || (current.weatherCode >= 51 && current.weatherCode <= 82)) {
+            return R.string.hair_humid;
         }
-        if (current.humidity > 70 || current.weatherCode >= 51) {
-            return R.string.ans_hair_rain;
+        if (current.temperature > 30) {
+            return R.string.hair_hot;
         }
-        return R.string.ans_hair_ok;
+        return R.string.hair_default;
     }
 }

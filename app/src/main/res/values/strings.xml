@@ -17,38 +17,57 @@
     <string name="today_label">Today</string>
     <string name="next_7_days">Next 7 Days ></string>
 
-    <!-- Clothing Advice Strings -->
-    <string name="advice_hot">N\'oubliez pas votre chapeau et vos lunettes de soleil. Privilégiez le coton léger.</string>
-    <string name="advice_windy">Prévoyez une veste coupe-vent et un pull.</string>
-    <string name="advice_rainy">Emportez un parapluie et des chaussures imperméables.</string>
-    <string name="advice_snowy">Bonnet, gants et écharpe indispensables. Double couche.</string>
-    <string name="advice_default">Tenue standard conseillée pour la journée.</string>
-    <string name="advice_title">Conseil Vestimentaire</string>
-    <string name="assistant_title">Assistant Personnel</string>
-    <string name="advice_footer">Basé sur les conditions actuelles de votre ville.</string>
+    <!-- Assistant Strings -->
+    <string name="assistant_title">Mon Coach Météo</string>
+    <string name="advice_title">Conseil Look</string>
+    <string name="activity_title">Le plan idéal</string>
+    <string name="advice_footer">Calculé avec amour pour votre position.</string>
     <string name="back_desc">Retour</string>
-    <string name="assistant_btn_desc">Assistant Conseil</string>
+    <string name="chat_title">Discutons un peu</string>
+    <string name="assistant_btn_desc">Ouvrir l\'assistant</string>
 
-    <!-- Activity Suggestion Strings -->
-    <string name="activity_title">Activité suggérée</string>
-    <string name="activity_sunny">Météo idéale pour une balade au parc, une séance de sport en extérieur ou un pique-nique.</string>
-    <string name="activity_rainy">Parfait pour une visite de musée, un moment lecture au calme ou une séance de cinéma.</string>
-    <string name="activity_cold">Idéal pour un chocolat chaud en terrasse chauffée ou une activité créative à la maison.</string>
-    <string name="activity_storm">Météo instable : privilégiez le télétravail ou des activités d\'intérieur sécurisées.</string>
-    <string name="activity_default">Une belle journée pour vos activités habituelles, profitez-en !</string>
+    <!-- Clothing Advice -->
+    <string name="advice_hot">Sortez léger ! Coton et lin sont vos meilleurs amis aujourd\'hui. ☀️</string>
+    <string name="advice_windy">Le vent souffle fort, une veste coupe-vent ne sera pas de trop. 💨</string>
+    <string name="advice_rainy">Grisaille et pluie au menu. Un imperméable et vous voilà paré ! ☔</string>
+    <string name="advice_snowy">Sortez couvert : multicouches, gants et bonnet obligatoires ! ❄️</string>
+    <string name="advice_default">Une tenue confortable fera l\'affaire pour cette journée.</string>
 
-    <!-- Chat Feature -->
-    <string name="chat_title">Discuter avec l\'assistant</string>
-    <string name="chat_welcome">Bonjour ! Posez-moi une question sur votre journée.</string>
-    <string name="chat_q1">Sport en extérieur ?</string>
-    <string name="chat_q2">Laver ma voiture ?</string>
-    <string name="chat_q3">Conseil cheveux ?</string>
+    <!-- Activity Suggestions -->
+    <string name="activity_sunny">Le temps est magnifique pour un jogging ou un café en terrasse. Profitez-en !</string>
+    <string name="activity_rainy">Et si vous en profitiez pour ce livre qui traîne ou un bon film ?</string>
+    <string name="activity_cold">Restez au chaud, c\'est le moment parfait pour une session cocooning.</string>
+    <string name="activity_storm">Restez prudent, privilégiez les activités à l\'intérieur en toute sécurité.</string>
+    <string name="activity_default">Une journée équilibrée, faites ce qui vous plaît !</string>
 
-    <string name="ans_sport_ok">Oui ! Les conditions sont excellentes pour transpirer dehors.</string>
-    <string name="ans_sport_no">Mieux vaut rester au chaud ou aller en salle, il risque de pleuvoir.</string>
-    <string name="ans_car_ok">C\'est le moment idéal, pas de pluie prévue pour salir votre carrosserie.</string>
-    <string name="ans_car_no">Attendez un peu, la météo pourrait gâcher votre lavage rapidement.</string>
-    <string name="ans_hair_wind">Attention au vent, vos cheveux risquent de s\'emmêler. Attachez-les !</string>
-    <string name="ans_hair_rain">L\'humidité est haute, prévoyez un soin anti-frisottis.</string>
-    <string name="ans_hair_ok">Météo clémente, vos cheveux resteront parfaits aujourd\'hui.</string>
+    <!-- Interactive Chat - Complicite & Emoji -->
+    <string name="chat_welcome">Coucou ! Je connais la météo par cœur, pose-moi tes questions ! 👋</string>
+    <string name="chat_q_look">👗 Mon look idéal ?</string>
+    <string name="chat_q_bike">🚲 Go en vélo ?</string>
+    <string name="chat_q_laundry">🧺 Lessive party ?</string>
+
+    <string name="ans_look_hot">Fait chaud ! Coton léger et lunettes de soleil, tu vas être au top. 😎</string>
+    <string name="ans_look_rain">Sortie humide... Prends ton plus bel imperméable, c\'est plus sûr. ☔</string>
+    <string name="ans_look_default">Une petite veste légère et tu es paré(e) pour tout ! ✨</string>
+
+    <string name="ans_bike_ok">Fonce ! Pas de pluie et un vent calme, c\'est royal pour pédaler. 🚲</string>
+    <string name="ans_bike_no">Laisse tomber le vélo... Entre le vent et la pluie, tu vas regretter. 🚇</string>
+
+    <string name="ans_laundry_ok">C\'est le moment ! Ton linge va sécher en un clin d\'œil. ✅</string>
+    <string name="ans_laundry_no">Mauvaise idée... Avec cette humidité, il va rester mouillé des jours. ❌</string>
+    <!-- Sport -->
+    <string name="sport_sunny">🌞 Super pour le sport ! Température idéale, pensez à vous hydrater.</string>
+    <string name="sport_rainy">☔ Temps humide – préférez un sport en intérieur (salle, piscine).</string>
+    <string name="sport_cold">❄️ Il fait froid ! Couvrez-vous bien ou choisissez une activité en salle.</string>
+    <string name="sport_default">✅ Bonne météo pour faire du sport, profitez-en !</string>
+
+    <!-- Lavage auto -->
+    <string name="carwash_rainy">🧽 Risque de pluie élevé – attendez pour laver votre voiture.</string>
+    <string name="carwash_cold">❄️ Gel possible – ne lavez pas votre voiture aujourd\'hui.</string>
+    <string name="carwash_default">🚗 Ciel clair – vous pouvez laver votre voiture sans souci.</string>
+
+    <!-- Coiffure -->
+    <string name="hair_humid">💨 Humidité élevée – vos cheveux risquent de frisotter, attachez-les ou utilisez un sérum.</string>
+    <string name="hair_hot">🔥 Très chaud – protégez vos cheveux du soleil et évitez les appareils chauffants.</string>
+    <string name="hair_default">💇 Parfaite météo pour une belle coiffure !</string>
 </resources>
